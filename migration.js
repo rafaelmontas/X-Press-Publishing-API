@@ -9,5 +9,10 @@ db.serialize(function() {
     '`date_of_birth` TEXT NOT NULL, ' +
     '`biography` TEXT NOT NULL, ' +
     '`is_currently_employed` INTEGER NOT NULL DEFAULT 1, ' +
-    'PRIMARY KEY(`id`) )');
+		'PRIMARY KEY(`id`) )');
+	db.run('CREATE TABLE IF NOT EXISTS `Series` ( ' +
+		'`id` INTEGER NOT NULL, ' +
+		'`name` TEXT NOT NULL, ' +
+		'`description` TEXT NOT NULL, ' +
+		'PRIMARY KEY(`id`) )');	
 });
